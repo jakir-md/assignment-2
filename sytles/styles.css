@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+.inter-primary {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+/* shared styles */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.primary-bg-color{
+    background-color: rgb(230, 83, 60);
+}
+.primary-txt-color{
+    color: rgb(230, 83, 60);
+}
+.secondary-txt-color{
+    color: #ffffff;
+}
+.tertiary-txt-color{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* navigation menu design */
+body{
+    background: black;
+}
+header{
+    height: 600px;
+    background: linear-gradient(
+        to bottom, /* The direction of the gradient */
+        rgb(26, 26, 26) 0%,   /* Strong color at the top */
+        rgba(101, 101, 101, 0.3) 10%, /* Lighter towards the middle */
+        rgba(138, 137, 137, 0.3) 70%, /* Lighter in the middle */
+        rgba(234, 229, 229, 0) 95%  /* Strong color at the bottom */
+    );
+}
+.brand {
+   font-weight: 800;
+   font-size: 3rem;
+   margin-left: 0px;
+}
+.navigation-menu{
+    max-width: 75%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 47px;
+}
+.nav-menus > ul{
+    list-style: none;
+    margin: 4px;
+}
+.nav-menus > ul > li {
+    text-decoration: none;
+    color: #ffffff;
+}
+.nav-menus > ul {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 47px;
+    padding: 4px 16px 4px 4px;
+}
+.nav-menus{
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 39px;
+}
+.nav-menus > ul > li:first-child {
+    font-weight: 700;
+    background-color: rgb(230, 83, 60);
+    border-radius: 42px;
+    text-align: center;
+    padding: 4px 20px;
+}
+.primary-btn{
+    background-color: rgb(230, 83, 60);
+    padding: 16px 40px;
+    border-radius: 42px;
+    border: 0px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff
+}
+.hamburger{
+    display: none;
+}
+
+/* hero section design */
+.hero-section{
+    max-width: 75%;
+    margin: 30px auto 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-image  img {
+    width: 100%;
+}
+.hero-text{
+    width: 440px;
+}
+.hero-text-title {
+    font-weight: 900;
+    font-size: 4rem;
+    color: #ffffff;
+}
+.hero-text-description{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 28px 0px;
+}
+.download-app{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 16px 40px;
+    border-radius: 42px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.hero-button{
+    display: flex;
+    gap: 20px;
+}
+
+
+/* card design */
+.work-out-tutorial > div:first-child{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.tutorial-title{
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.hero-image {
+    position: relative;
+}
+.work-out-tutorial{
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    gap: 12px;
+    backdrop-filter: blur(5px);
+    background:rgba(48, 48, 48, 0.54);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    position: absolute;
+    bottom: 70px;
+    left: -120px;
+}
+.work-out-video{
+    width: 130px;
+    padding: 20px 10px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    position: absolute;
+    top: 140px;
+    right: -40px;
+}
+.tutorial-text-description{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 576px) {
+    .nav-menus{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hero-text-title {
+        font-size: 2.2rem;
+    }
+    .hero-section{
+        flex-direction: column;
+    }
+    .hero-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .hero-text-title{
+        max-width: 90%;
+        justify-content: start;
+    }
+    .hero-text-description{
+        max-width: 90%;
+    }
+    .work-out-video{
+        top: 100px;
+        right: 10px;
+    }
+    .work-out-tutorial{
+        bottom: 100px;
+        left: 1px;
+    }
+    .primary-btn{
+        padding: 8px 20px;
+        border-radius: 42px;
+        border: 0px;
+        font-weight: 700;
+        font-size: .8rem;
+        color: #ffffff
+    }
+    .download-app{
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        padding: 8px 20px;
+        border-radius: 42px;
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+}
+
+
+/* change habit section design */
+.change-habit-with-running{
+    max-width: 75%;
+    margin: 150px auto 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.change-habit-text{
+    text-align: center;
+}
+.change-habit-card > img {
+    border: 2px solid gray;
+    border-radius: 50%;
+}
+.change-habit-card > p{
+    font-size: 0.8rem;
+}
+.change-habit-card > h3 {
+    margin: 10px 0;
+}
+.change-habit-card{
+    text-align: center;
+}
+.change-habit-text > h3 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+.change-habit-text > p {
+    margin: 20px 0px;
+}
+.change-habit-card-container {
+    display: flex;
+    margin-top: 50px;
+}
+
+.running-habit{
+    margin: 100px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: rgb(34, 34, 34);
+    padding: 30px;
+    border-radius: 18px;
+}
+.running-habit  img {
+    width: 350px;
+    height: 250px;
+    border-radius: 18px;
+}
+.running-habit-text {
+    width: 400px;
+}
+.running-habit-text h3{
+    font-size: 3rem;
+}
+.running-habit-text p {
+    font-size: 0.8rem;
+    padding: 10px 0px 20px 0px;
+}
+
+@media screen and (max-width: 576px) {
+    .change-habit-with-running{
+        margin: 0px 50px;
+    }
+    .change-habit-card-container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .running-habit{
+        flex-direction: column;
+    }
+    .running-habit-text{
+        width: 98%;
+    }
+    .running-habit img {
+        width: 98%;
+        margin-top: 20px;
+    }
+    .running-habit-text button {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .running-habit-text h3, .change-habit-text h3{
+        font-size: 1.5rem;
+    }
+}
+
+.display-none{
+    display: none;
+}
